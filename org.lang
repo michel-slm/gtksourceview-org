@@ -36,9 +36,9 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
   </metadata>
 
   <styles>
-    <style id="comment"    _name="Comment" map-to="def:comment"/>
-    <style id="heading"    _name="Heading" map-to="def:type"/>
-    <style id="underlined" _name="Link"    map-to="def:underlined"/>
+    <style id="comment"    _name="Comment"    map-to="def:comment"/>
+    <style id="heading"    _name="Heading"    map-to="def:type"/>
+    <style id="underlined" _name="Underlined" map-to="def:underlined"/>
   </styles>
 
   <definitions>
@@ -66,6 +66,10 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 	<context id="heading" style-ref="heading">
 	  <start>^[\*]+</start>
 	  <end>$</end>
+	</context>
+	<context id="external-link" style-ref="underlined">
+	  <start>\[\[</start>
+	  <end>\]\]</end>
 	</context>
       </include>
     </context>

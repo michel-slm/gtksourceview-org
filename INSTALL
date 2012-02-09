@@ -1,0 +1,16 @@
+The Makefile contains the following target:
+
+- install
+  installs both the language definition and the MIME type
+
+- install-lang
+  installs the language definition only
+
+- install-mime
+  installs the MIME type only
+
+By default the installation is private to the local user. To install
+to system directories, invoke make as root with 'DESTDIR=${PREFIX}'
+where PREFIX is /usr (for system packages), /usr/local (for locally
+installed software) or any other prefix matching your GtkSourceView
+installation.

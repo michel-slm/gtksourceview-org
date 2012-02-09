@@ -37,6 +37,7 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
   <styles>
     <style id="comment" _name="Comment" map-to="def:comment"/>
+    <style id="heading" _name="Heading" map-to="def:type"/>
   </styles>
 
   <definitions>
@@ -48,6 +49,10 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 	</context>
 	<context id="line-comment2" style-ref="comment">
 	  <start>^[\s]+#\+</start>
+	  <end>$</end>
+	</context>
+	<context id="heading" style-ref="heading">
+	  <start>^[\*]+</start>
 	  <end>$</end>
 	</context>
       </include>
